@@ -279,20 +279,79 @@ var rotationCount = 0;
 
 document.writeln(roti);
 
+// Get's the rotation count of an array as long as it can be rotated to a sorted array
+function getRotationCount(arrA){
+    var rotme = arrA.slice(); 
+    var rotSo = arrA.sort((a, b) => { return a - b });
+    var rotationC = 0; 
+    while (JSON.stringify(rotme) != JSON.stringify(rotSo) && rotationC <= arrA.length) {
+        document.writeln('rotationC: ', rotationC);
+        rotme.unshift(rotme.pop());
+        rotationC = rotationC + 1;
+    }
+    if(rotationC > arrA.length){
+        return null; 
+    }
+    return rotationC; 
+}
+
+var rot = getRotationCount([2, 3, 1]);
+document.writeln('rot: ', rot);  
+rot = getRotationCount([3, 1, 2]); 
+document.writeln('rot: ', rot);  
+rot = getRotationCount([3, 1, 2,3, 2]);
+document.writeln('rot: ', rot);  
+
+
 rottSorted = rott.sort((a, b) => { return a - b });
 
-document.writeln(rottSorted, ' roti: ', roti); 
-document.writeln(JSON.stringify(roti) == JSON.stringify(rottSorted)); 
+document.writeln(rottSorted, ' roti: ', roti);
+document.writeln(JSON.stringify(roti) == JSON.stringify(rottSorted));
 
-// while (JSON.stringify(roti) != JSON.stringify(rottSorted)) {
-//     document.writeln('ya');
-// }
-//     rotationCount = rotationCount + 1; 
-//     roti.unshift(roti.pop()); 
-//     document.writeln(roti); 
-// }
+while (JSON.stringify(roti) != JSON.stringify(rottSorted)) {
+    document.writeln('ya');
+    roti.unshift(roti.pop());
+    rotationCount = rotationCount + 1;
+}
+
+// Now we know our offset. Let's find our binary. 
+
+function findIndexBinarily(value) {
+    var maxIndex = this.length - 1;
+    var minIndex = 0;
+    var currentIndex;
+    var currentElement;
+    var resultIndex;
+
+    while (minIndex <= maxIndex) {
+        resultIndex = currentIndex = minIndex + maxIndex / 2 | 0;
+        currentElement = this[currentIndex];
+
+        if (currentElement < value) {
+            minIndex = currentIndex + 1;
+        } else if (currentElement > value) {
+            maxIndex = currendIndex - 1;
+        } else {
+            return currentIndex;
+        }
+    }
+    return ~minIndex;
+}
+
+Array.prototype.findIndexBinarily = findIndexBinarily; 
 
 
+
+function getIndex(arr, value){
+    var rotC = getRotationCount(arr); 
+    var index = arr.sort((a, b) => {return a-b}).findIndexBinarily(value);
+    document.writeln('index: ', index); 
+    return  index - rotC; 
+}
+
+document.writeln(getIndex([3, 1, 1, 2], 3)); 
+
+document.writeln(getIndex([1, 1, 1, 2, 3, 4, 1, 1], 4)); 
 
 /*
 Use dynamic programming to find the first X prime numbers

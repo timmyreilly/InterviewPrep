@@ -372,7 +372,7 @@ function findPrimes(x){
 
 findPrimes(10); 
 
-findPrimesAgain(x){
+function findPrimesAgain(x){
     for(var i=0; i < x; i++){
         var notPrime = false; 
         
@@ -389,7 +389,44 @@ findPrimesAgain(x){
 
 /*
 Write a function that prints out the binary form of an int
+*/
+document.writeln('*****************'); 
+
+var x = 5; 
+
+var output = '00000101';
+
+x = 6; 
+output = '00000110';
+
+
+function dec2bin(dec){
+    return (dec >>> 0).toString(2); 
+}
+
+document.write(' 1: ', dec2bin(1)); 
+document.write(' 6: ', dec2bin(6)); 
+document.write(' 244: ', dec2bin(244)); 
+document.write(' -256: ', dec2bin(-256)); 
+
+
+/*
 Implement parseInt
+*/
+document.writeln('*****************'); 
+
+
+// What is parseInt? 
+var asdf = parseInt(" 0xF", 16); 
+document.write(' asdf: ', asdf)
+asdf = parseInt("17", 8); 
+document.write(' asdf: ', asdf)
+asdf = parseInt(021, 8); 
+document.write(' asdf: ', asdf)
+document.write(' asdf: ', asdf)
+document.write(' asdf: ', asdf)
+
+/*
 Implement squareroot function
 Implement an exponent function (bonus: now try in log(n) time)
 Write a multiply function that multiples 2 integers without using *

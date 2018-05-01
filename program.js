@@ -285,7 +285,7 @@ function getRotationCount(arrA){
     var rotSo = arrA.sort((a, b) => { return a - b });
     var rotationC = 0; 
     while (JSON.stringify(rotme) != JSON.stringify(rotSo) && rotationC <= arrA.length) {
-        document.writeln('rotationC: ', rotationC);
+        // document.writeln('rotationC: ', rotationC);
         rotme.unshift(rotme.pop());
         rotationC = rotationC + 1;
     }
@@ -297,19 +297,16 @@ function getRotationCount(arrA){
 
 var rot = getRotationCount([2, 3, 1]);
 document.writeln('rot: ', rot);  
-rot = getRotationCount([3, 1, 2]); 
-document.writeln('rot: ', rot);  
 rot = getRotationCount([3, 1, 2,3, 2]);
 document.writeln('rot: ', rot);  
 
 
 rottSorted = rott.sort((a, b) => { return a - b });
 
-document.writeln(rottSorted, ' roti: ', roti);
-document.writeln(JSON.stringify(roti) == JSON.stringify(rottSorted));
+// document.writeln(rottSorted, ' roti: ', roti);
+// document.writeln(JSON.stringify(roti) == JSON.stringify(rottSorted));
 
 while (JSON.stringify(roti) != JSON.stringify(rottSorted)) {
-    document.writeln('ya');
     roti.unshift(roti.pop());
     rotationCount = rotationCount + 1;
 }
@@ -345,7 +342,6 @@ Array.prototype.findIndexBinarily = findIndexBinarily;
 function getIndex(arr, value){
     var rotC = getRotationCount(arr); 
     var index = arr.sort((a, b) => {return a-b}).findIndexBinarily(value);
-    document.writeln('index: ', index); 
     return  index - rotC; 
 }
 
@@ -355,6 +351,43 @@ document.writeln(getIndex([1, 1, 1, 2, 3, 4, 1, 1], 4));
 
 /*
 Use dynamic programming to find the first X prime numbers
+*/
+
+document.writeln('***********'); 
+
+function findPrimes(x){
+    for(var i=0; i < x; i++){
+        var not_prime = false; 
+
+        for (var di = 2; di <= i -1; di ++){
+            if(i % di === 0){
+                not_prime = true; 
+            }
+        }
+        if (not_prime === false){
+            document.writeln(i); 
+        }
+    }
+}
+
+findPrimes(10); 
+
+findPrimesAgain(x){
+    for(var i=0; i < x; i++){
+        var notPrime = false; 
+        
+        for (var divider = 0; divider < i; divider++){
+            if(i % divider ===0){
+                notPrime = true; 
+            }
+        }
+        if (notPrime === false){
+            document.writeln(i); 
+        }
+    }
+}
+
+/*
 Write a function that prints out the binary form of an int
 Implement parseInt
 Implement squareroot function

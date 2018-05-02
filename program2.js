@@ -155,5 +155,36 @@ document.write(" -'34'+10: ", -'34'+10); // -24 for crying out loud...
 
 document.write(" -'dude': ", -'dude'); 
 
+document.writeln(Math.max([2, 3, 4, 5])); 
 
+var arrNums = [2, 3, 4, 5]; 
+document.writeln(Math.max(arrNums)); 
 
+document.writeln('null == undefined: ', null == undefined); 
+
+/* How could you set a prefix before everything you log? 
+Just get the arguments, convert it to an array and unshift whatever prefix you want to set. Finally, use apply to pass all the arguments to console. 
+*/ 
+
+function log() {
+    var args = Array.prototype.slice.call(arguments); 
+    args.unshift('(app)'); 
+    console.log.apply(console, args); 
+}
+
+log('my message'); 
+log('my message', 'your message'); 
+
+/* 
+Scope and Hoisting: What will you see in the console for the following example: 
+*/
+
+var a = 1; 
+function boring() {
+    a = 10; 
+    return; 
+    function a() {}
+}
+boring(); 
+
+console.log(a); 

@@ -182,9 +182,76 @@ Scope and Hoisting: What will you see in the console for the following example:
 var a = 1; 
 function boring() {
     a = 10; 
+    console.log(a); 
     return; 
     function a() {}
 }
 boring(); 
 
 console.log(a); 
+
+function foo() {
+    var b; 
+    b =7; 
+    bar(); 
+    var baz; 
+    // baz(); function expression doesn't get hoisted.  
+    return b; 
+    function bar() {
+        console.log(b); 
+    }
+    baz = function() {
+        console.log(b); 
+    }
+}
+
+foo(); 
+
+// Bar is hoisted to the front of the local scope. 
+
+// Closures Inside Loops...
+
+for (var i = 0; i < 10; i++){
+    setTimeout(function() {
+        console.log(i); 
+    }, 10); 
+}
+
+// IIFE - Immediately invoked function expression...
+
+for (var i = 0; i < 3; i++){
+    setTimeout((function(i){
+        console.log(i); 
+    })(i), 10)
+}
+
+var mobj = {
+    price: 20.99, 
+    get_price: function () {
+        return this.price; 
+    }
+};
+
+var customObj = Object.create(mobj); 
+customObj.price = 19.99; 
+
+delete customObj.price; 
+document.writeln(customObj.get_price()); 
+
+delete mobj.price; 
+// delete customObj.price; - doing it again doesn't delete it either. 
+document.writeln(customObj.get_price()); 
+
+// 16. Pass by Value of by reference? 
+
+// Primitive types are passed by value... objects are passed by reference. 
+
+var num = 10, 
+    name = 'TIMMMMM', 
+    obj1 = {
+        value: 'first value'
+    },
+    obj2 = {
+        value: 'second value'
+    }
+

@@ -245,6 +245,7 @@ document.writeln(customObj.get_price());
 // 16. Pass by Value of by reference? 
 
 // Primitive types are passed by value... objects are passed by reference. 
+// https://snook.ca/archives/javascript/javascript_pass 
 
 var num = 10, 
     name = 'TIMMMMM', 
@@ -253,5 +254,67 @@ var num = 10,
     },
     obj2 = {
         value: 'second value'
+    },
+    obj3 = obj2; 
+
+function change(num, name, obj1, obj2){
+    num = num*10; 
+    name = "Tim Reilly",
+    obj1 = obj2; 
+    obj2.value = "new val"; 
+}
+
+change(num, name, obj1, obj2); 
+
+document.write('num: ', num, ' name: ', name, ' obj1.value: ', obj1.value, ' obj2.value: ', obj2.value, ' obj3.value: ', obj3.value); 
+
+document.writeln('*********'); 
+
+// 17. Memoization: 
+// How could you implement cache to save calculation time for a recursive fibonacci function? 
+
+
+
+var fibonacci = (function() {
+    var memo = {}; 
+
+    function f(n){
+        var value; 
+
+        if (n in memo){
+            value = memo[n]; 
+        } else {
+            if ( n === 0 || n === 1){
+                value = n; 
+            } else {
+                value = f(n - 1) + f(n - 2); 
+            }
+            memo[n] = value; 
+        }
+        return value; 
     }
+    return f; 
+})(); 
+
+document.writeln(fibonacci(10)); 
+
+// 18. Cache Function Execution
+// How could you cache execution of any function? 
+
+function cacheFn(fn){
+    var cache = {}; 
+
+    return function(arg) {
+        if(cache[arg]){
+            return cache[arg]; 
+        } else {
+            cache[arg] = fn(arg); 
+            return cache[arg]; 
+        }
+    }
+}
+
+cacheFn(123); 
+
+// What if you are passing more than one argument? 
 

@@ -318,3 +318,130 @@ cacheFn(123);
 
 // What if you are passing more than one argument? 
 
+// First we have to use arguments to get all the parameters passed to the function and then we can generate key for the cache object.
+// Generating key for the cache object could be tricky and one solution could be just get all the parameters and concatenate those. 
+
+function r (){
+    var args = arguments; 
+    var key = [].slice.call(args).join(''); 
+    if(cache[key]){
+        return cache[key];
+    } else {
+        cache[key] = fn.apply(this, args); 
+        return cache[key]; 
+    }
+}
+
+// 19. JQuery Style Chaining...
+
+function slow(callback) {
+    setTimeout(function() {
+        if(Math.random() > 0.5) {
+            return callback("error 417", null)
+        }
+        callback(null, {id:123})
+    }, 500);
+}
+
+function exec(fn){
+    // write your code here. 
+    console.log("EXECUTION"); 
+}
+
+var obj = {
+    first: function() {console.log("first"); return obj; },
+    second: function() {console.log("second"); return obj; },
+    third: function() {console.log("third"); return obj; }
+}
+
+obj.first().second().third(); 
+
+// 20. Animation
+// How could you implement moveLeft animation?
+
+function moveLeft(elem, distance) {
+    var left = 0; 
+    
+    function frame() {
+        left++; 
+        elem.style.left = left + 'px'; 
+
+        if(left == distance) {
+            clearInterval(timeId);
+        }
+    }
+    var timeId = setInterval(frame, 10); 
+}
+
+// 21 Curring - How would you implement currying for any functions. 
+
+// Curring is partial invocation of a function. 
+// Currying means the first few arguments of a function are pre-processed and a function is returned. 
+// The returning function can add more arguments to the curried function. 
+// It's like if you have given one or two spice to the curry and cooked a little bit, still you can add further spice to it. 
+
+function addBase(base){
+    return function(num) {
+        return base + num; 
+    }
+}
+
+var addTen = addBase(10); 
+document.writeln(addTen(5)); 
+document.writeln(addTen(80)); 
+
+String.prototype.repeatify = function(num){
+    for(var i= 0; i< num; i++){
+        console.log(this); 
+    }
+}
+
+'hello'.repeatify(4); 
+
+String.prototype.repeaty = function(num){
+    var s = ''; 
+
+    for (var i = 0; i< num; i++){
+        s = s + this; 
+    }
+
+    return s; 
+}
+
+document.writeln('helloagain'.repeaty(4)); 
+
+String.prototype.repeaty = String.prototype.repeaty || function(times){
+    console.log("you shouldn't see this"); 
+}
+
+document.writeln('cheese burger'.repeaty(4))
+
+
+var fullName = 'John Doe'; 
+
+var objjj = {
+    fullName: 'TIMBO',
+    prop: {
+        fullName: 'CHEESE BURGER MAN', 
+        getFullName: function() {
+            return this.fullName;
+        }
+    }
+};
+
+document.writeln('objjj.prop.getFullName(): ', objjj.prop.getFullName()); 
+var test = objjj.prop.getFullName; 
+document.writeln(' test: ', test());
+
+// test is implicitly set as a property of the global object. 
+
+// call() and apply()
+
+// we can fix this issue by forcing the context of the function using either the call()
+// or apply() function. https://www.sitepoint.com/whats-the-difference-between-function-call-and-function-apply/ 
+
+
+document.writeln(test.call(objjj.prop)); // this should give us CHEESE BURGER MAN; 
+
+document.writeln(test.call(objjj)); // this should give us TIMBO
+

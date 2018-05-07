@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9C4ECD4-02DB-4016-95EF-41AB0B60ABE5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CodingProblems</RootNamespace>
+    <AssemblyName>CodingProblems</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>CodingProblems.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Debug\CodingProblems.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>CodingProblems.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Array_\CompressSimple\CompressSimple1StandardComplete.cs" />
+    <Compile Include="Array_\CompressSimple\CompressSimple1StandardCompleteTests.cs" />
+    <Compile Include="Array_\FindMatchingPairs\FindMatchingPairs1CharCountMapsComplete.cs" />
+    <Compile Include="Array_\FindMatchingPairs\FindMatchingPairs1CharCountMapsCompleteTests.cs" />
+    <Compile Include="Array_\FindMatchingPairs\FindMatchingPairs2SortAndParseComplete.cs" />
+    <Compile Include="Array_\FindMatchingPairs\FindMatchingPairs2SortAndParseCompleteTests.cs" />
+    <Compile Include="Array_\FizzBuzz\FizzBuzz1StandardComplete.cs" />
+    <Compile Include="Array_\FizzBuzz\FizzBuzz1STandardCompleteTests.cs" />
+    <Compile Include="Array_\MagicIndex\MagicIndex1BruteForceComplete.cs" />
+    <Compile Include="Array_\MagicIndex\MagicIndex1BruteForceCompleteTests.cs" />
+    <Compile Include="Array_\MagicIndex\MagicIndex2BinarySearchComplete.cs" />
+    <Compile Include="Array_\MagicIndex\MagicIndex2BinarySearchCompleteTests.cs" />
+    <Compile Include="Array_\MagicIndex\MagicIndex3BinarySearchAllowDuplicatesComplete.cs" />
+    <Compile Include="Array_\MagicIndex\MagicIndex3BinarySearchAllowDuplicatesCompleteTests.cs" />
+    <Compile Include="Array_\MergeSortedInline\ArrayMergeSortedInline1Complete.cs" />
+    <Compile Include="Array_\MergeSortedInline\ArrayMergeSortedInline1CompleteTests.cs" />
+    <Compile Include="Array_\MergeSorted\ArrayMergeSorted1SimpleComplete.cs" />
+    <Compile Include="Array_\MergeSorted\ArrayMergeSorted1SimpleCompleteTests.cs" />
+    <Compile Include="Array_\MergeSorted\ArrayMergeSorted2SingleLoopComplete.cs" />
+    <Compile Include="Array_\MergeSorted\ArrayMergeSorted2SingleLoopCompleteTests.cs" />
+    <Compile Include="Array_\MissingInt\ArrayFindMissingInt1Complete.cs" />
+    <Compile Include="Array_\MissingInt\ArrayFindMissingInt1CompleteTests.cs" />
+    <Compile Include="Array_\PowerSet\PowerSet1RecursiveComplete.cs" />
+    <Compile Include="Array_\PowerSet\PowerSet1RecursiveCompleteTests.cs" />
+    <Compile Include="Array_\PowerSet\PowerSet2CombinatoricsComplete.cs" />
+    <Compile Include="Array_\PowerSet\PowerSet2CombinatoricsCompleteTests.cs" />
+    <Compile Include="Array_\SearchSortedNoSize\ArraySearchSortedNoSize1BruteForceComplete.cs" />
+    <Compile Include="Array_\SearchSortedNoSize\ArraySearchSortedNoSize1BruteForceCompleteTests.cs" />
+    <Compile Include="Array_\SearchSortedNoSize\ArraySearchSortedNoSize2BinarySearchComplete.cs" />
+    <Compile Include="Array_\SearchSortedNoSize\ArraySearchSortedNoSize2BinarySearchCompleteTests.cs" />
+    <Compile Include="Array_\SearchSortedNoSize\ArraySearchSortedNoSize3BinarySearchNoSizeComplete.cs" />
+    <Compile Include="Array_\SearchSortedNoSize\ArraySearchSortedNoSize3BinarySearchNoSizeCompleteTests.cs" />
+    <Compile Include="Array_\SearchSortedNoSize\Listy.cs" />
+    <Compile Include="Array_\Sort\ArraySort1BubbleSortComplete.cs" />
+    <Compile Include="Array_\Sort\ArraySort1BubbleSortCompleteTests.cs" />
+    <Compile Include="Array_\Sort\ArraySort2SelectionSortComplete.cs" />
+    <Compile Include="Array_\Sort\ArraySort2SelectionSortCompleteTests.cs" />
+    <Compile Include="Array_\Sort\ArraySort3InsertionSortComplete.cs" />
+    <Compile Include="Array_\Sort\ArraySort3InsertionSortCompleteTests.cs" />
+    <Compile Include="Array_\Sort\ArraySort4MergeSortSimpleComplete.cs" />
+    <Compile Include="Array_\Sort\ArraySort4MergeSortSimpleCompleteTests.cs" />
+    <Compile Include="Array_\StackOfBoxes\Box.cs" />
+    <Compile Include="Array_\StackOfBoxes\StackOfBoxes1ComputeAndCountComplete.cs" />
+    <Compile Include="Array_\StackOfBoxes\StackOfBoxes1ComputeAndCountCompleteTests.cs" />
+    <Compile Include="NumberSwapper\NumberSwapper1UseTempVarComplete.cs" />
+    <Compile Include="NumberSwapper\NumberSwapper1UseTempVarCompleteTests.cs" />
+    <Compile Include="BinaryTree\CheckBalanced\BinaryTreeCheckBalanced1RecursiveComplete.cs" />
+    <Compile Include="BinaryTree\CheckBalanced\BinaryTreeCheckBalanced1RecursiveCompleteTests.cs" />
+    <Compile Include="BinaryTree\CheckBalanced\BinaryTreeCheckBalanced2RecursiveOptimizedComplete.cs" />
+    <Compile Include="BinaryTree\CheckBalanced\BinaryTreeCheckBalanced2RecursiveOptimizedCompleteTests.cs" />
+    <Compile Include="BinaryTree\GetHeight\BinaryTreeGetHeight2IterativeCompleteTests.cs" />
+    <Compile Include="BinaryTree\GetHeight\BinaryTreeGetHeight1RecursiveComplete.cs" />
+    <Compile Include="BinaryTree\GetHeight\BinaryTreeGetHeight1RecursiveCompleteTests.cs" />
+    <Compile Include="BinaryTree\GetHeight\BinaryTreeGetHeight2IterativeComplete.cs" />
+    <Compile Include="BinaryTree\IsBinarySearchTree\BinaryTreeIsBinarySearchTree1RecursiveComplete.cs" />
+    <Compile Include="BinaryTree\IsBinarySearchTree\BinaryTreeIsBinarySearchTree1RecursiveCompleteTests.cs" />
+    <Compile Include="BinaryTree\IsComplete\BinaryTreeIsComplete1Complete.cs" />
+    <Compile Include="BinaryTree\IsComplete\BinaryTreeIsComplete1CompleteTests.cs" />
+    <Compile Include="BinaryTree\IsFull\BinaryTreeIsFull1Complete.cs" />
+    <Compile Include="BinaryTree\IsFull\BinaryTreeIsFull1CompleteTests.cs" />
+    <Compile Include="BinaryTree\IsPerfect\BinaryTreeIsPerfect1Complete.cs" />
+    <Compile Include="BinaryTree\IsPerfect\BinaryTreeIsPerfect1CompleteTests.cs" />
+    <Compile Include="BinaryTree\Node\BinaryTreeNode.cs" />
+    <Compile Include="BinaryTree\Node\BinaryTreeNodeTestData.cs" />
+    <Compile Include="BinaryTree\Traverse\InOrder\BinaryTreeTraverseInOrder1RecursiveComplete.cs" />
+    <Compile Include="BinaryTree\Traverse\InOrder\BinaryTreeTraverseInOrder1RecursiveCompleteTests.cs" />
+    <Compile Include="BinaryTree\Traverse\InOrder\BinaryTreeTraverseInOrder2IterativeComplete.cs" />
+    <Compile Include="BinaryTree\Traverse\InOrder\BinaryTreeTraverseInOrder2IterativeCompleteTests.cs" />
+    <Compile Include="BinaryTree\Traverse\PostOrder\BinaryTreeTraversePostOrder1RecursiveComplete.cs" />
+    <Compile Include="BinaryTree\Traverse\PostOrder\BinaryTreeTraversePostOrder1RecursiveCompleteTests.cs" />
+    <Compile Include="BinaryTree\Traverse\PostOrder\BinaryTreeTraversePostOrder2IterativeComplete.cs" />
+    <Compile Include="BinaryTree\Traverse\PostOrder\BinaryTreeTraversePostOrder2IterativeCompleteTests.cs" />
+    <Compile Include="BinaryTree\Traverse\PreOrder\BinaryTreeTraversePreOrder1RecursiveComplete.cs" />
+    <Compile Include="BinaryTree\Traverse\PreOrder\BinaryTreeTraversePreOrder1RecursiveCompleteTests.cs" />
+    <Compile Include="BinaryTree\Traverse\PreOrder\BinaryTreeTraversePreOrder2IterativeComplete.cs" />
+    <Compile Include="BinaryTree\Traverse\PreOrder\BinaryTreeTraversePreOrder2IterativeCompleteTests.cs" />
+    <Compile Include="BitManipulation\CreatePatternMask\BitManipulationCreatePatternMask1Complete.cs" />
+    <Compile Include="BitManipulation\CreatePatternMask\BitManipulationCreatePatternMask1CompleteTests.cs" />
+    <Compile Include="BitManipulation\GetBitCount\BitManipulationGetBitCount1ConvertToStringComplete.cs" />
+    <Compile Include="BitManipulation\GetBitCount\BitManipulationGetBitCount1ConvertToStringCompleteTests.cs" />
+    <Compile Include="BitManipulation\GetBitCount\BitManipulationGetBitCount2MaskShiftComplete.cs" />
+    <Compile Include="BitManipulation\GetBitCount\BitManipulationGetBitCount2MaskShiftCompleteTests.cs" />
+    <Compile Include="BitManipulation\GetBitCount\BitManipulationGetBitCount3BitShiftComplete.cs" />
+    <Compile Include="BitManipulation\GetBitCount\BitManipulationGetBitCount3BitShiftCompleteTests.cs" />
+    <Compile Include="BitManipulation\CreateSimpleMask\BitManipulationCreateSimpleMask1Complete.cs" />
+    <Compile Include="BitManipulation\CreateSimpleMask\BitManipulationCreateSimpleMask1CompleteTests.cs" />
+    <Compile Include="BitManipulation\GetMostSignificantBit\BitManipulationGetMostSignificantBit1ConvertToStringComplete.cs" />
+    <Compile Include="BitManipulation\GetMostSignificantBit\BitManipulationGetMostSignificantBit1ConvertToStringCompleteTests.cs" />
+    <Compile Include="BitManipulation\GetMostSignificantBit\BitManipulationGetMostSignificantBit2BitShiftComplete.cs" />
+    <Compile Include="BitManipulation\GetMostSignificantBit\BitManipulationGetMostSignificantBit2BitShiftCompleteTests.cs" />
+    <Compile Include="BitManipulation\GetMostSignificantBit\BitManipulationGetMostSignificantBit3MaskShiftComplete.cs" />
+    <Compile Include="BitManipulation\GetMostSignificantBit\BitManipulationGetMostSignificantBit3MaskShiftCompleteTests.cs" />
+    <Compile Include="BitManipulation\GetMostSignificantBit\BitManipulationGetMostSignificantBit4BinarySearchComplete.cs" />
+    <Compile Include="BitManipulation\GetMostSignificantBit\BitManipulationGetMostSignificantBit4BinarySearchCompleteTests.cs" />
+    <Compile Include="BitManipulation\GetSetClearBit\BitManipulationGetSetClearBit1Complete.cs" />
+    <Compile Include="BitManipulation\GetSetClearBit\BitManipulationGetSetClearBit1CompleteTests.cs" />
+    <Compile Include="BitManipulation\Insertion\BitManipulationInsertion1Complete.cs" />
+    <Compile Include="BitManipulation\Insertion\BitManipulationInsertion1CompleteTests.cs" />
+    <Compile Include="BitManipulation\NextNumber\BitManipulationNextNumber1BruteForceComplete.cs" />
+    <Compile Include="BitManipulation\NextNumber\BitManipulationNextNumber1BruteForceCompleteTests.cs" />
+    <Compile Include="BitManipulation\NextNumber\BitManipulationNextNumber2BitAdjustComplete.cs" />
+    <Compile Include="BitManipulation\NextNumber\BitManipulationNextNumber2BitAdjustCompleteTests.cs" />
+    <Compile Include="BitManipulation\NextNumber\BitManipulationNextNumber3ArithmeticCompleteTests.cs" />
+    <Compile Include="BitManipulation\NextNumber\BitManipulationNextNumber3ArithmeticComplete.cs" />
+    <Compile Include="BitManipulation\PairwiseSwap\BitManipulationPairwiseSwap1BruteForceComplete.cs" />
+    <Compile Include="BitManipulation\PairwiseSwap\BitManipulationPairwiseSwap1BruteForceCompleteTests.cs" />
+    <Compile Include="BitManipulation\PairwiseSwap\BitManipulationPairwiseSwap2ClearAndShiftComplete.cs" />
+    <Compile Include="BitManipulation\PairwiseSwap\BitManipulationPairwiseSwap2ClearAndShiftCompleteTests.cs" />
+    <Compile Include="Graph\Graph\GraphGraph.cs" />
+    <Compile Include="Graph\Node\GraphNode.cs" />
+    <Compile Include="Graph\RouteBetweenNodes\GraphIsRouteBetweenNodes1DFSComplete.cs" />
+    <Compile Include="Graph\RouteBetweenNodes\GraphIsRouteBetweenNodes1DFSCompleteTests.cs" />
+    <Compile Include="Helpers\File_\FileHelpers.cs" />
+    <Compile Include="Helpers\File_\FileHelpersTests.cs" />
+    <Compile Include="IsUnique\String\IsUniqueString1HashSetComplete.cs" />
+    <Compile Include="IsUnique\String\IsUniqueString1HashSetCompleteTests.cs" />
+    <Compile Include="IsUnique\String\IsUniqueString2NoAdditionalDSComplete.cs" />
+    <Compile Include="IsUnique\String\IsUniqueString2NoAdditionalDSCompleteTests.cs" />
+    <Compile Include="IsUnique\String\IsUniqueString3SortFirstComplete.cs" />
+    <Compile Include="IsUnique\String\IsUniqueString3SortFirstCompleteTests.cs" />
+    <Compile Include="IsUnique\String\IsUniqueString4BoolArrayComplete.cs" />
+    <Compile Include="IsUnique\String\IsUniqueString4BoolArrayCompleteTests.cs" />
+    <Compile Include="IsUnique\String\IsUniqueString5BitArrayComplete.cs" />
+    <Compile Include="IsUnique\String\IsUniqueString5BitArrayCompleteTests.cs" />
+    <Compile Include="LinkedList\SingleLink\Helpers\LinkedListSingleLinkNode.cs" />
+    <Compile Include="LinkedList\SingleLink\Helpers\LinkedListSingleLinkCompareTests.cs" />
+    <Compile Include="LinkedList\SingleLink\Helpers\LinkedListSingleLinkCreateFromDataTests.cs" />
+    <Compile Include="LinkedList\SingleLink\FindIntersection\LinkedListSingleLinkFindIntersection1BruteForceComplete.cs" />
+    <Compile Include="LinkedList\SingleLink\FindIntersection\LinkedListSingleLinkFindIntersection1BruteForceCompleteTests.cs" />
+    <Compile Include="LinkedList\SingleLink\FindIntersection\LinkedListSingleLinkFindIntersection2OptimizedComplete.cs" />
+    <Compile Include="LinkedList\SingleLink\FindIntersection\LinkedListSingleLinkFindIntersection2OptimizedCompleteTests.cs" />
+    <Compile Include="LinkedList\SingleLink\Partition\LinkedListSingleLinkPartition1StableComplete.cs" />
+    <Compile Include="LinkedList\SingleLink\Partition\LinkedListSingleLinkPartition1StableCompleteTests.cs" />
+    <Compile Include="LinkedList\SingleLink\Partition\LinkedListSingleLinkPartition2StableUseDummyNodesComplete.cs" />
+    <Compile Include="LinkedList\SingleLink\Partition\LinkedListSingleLinkPartition2StableUseDummyNodesCompleteTests.cs" />
+    <Compile Include="LinkedList\SingleLink\Partition\LinkedListSingleLinkPartition3NonStableComplete.cs" />
+    <Compile Include="LinkedList\SingleLink\Partition\LinkedListSingleLinkPartition3NonStableCompleteTests.cs" />
+    <Compile Include="LinkedList\SingleLink\RemoveDuplicates\LinkedListSingleRemoveDuplicates1HashSetComplete.cs" />
+    <Compile Include="LinkedList\SingleLink\RemoveDuplicates\LinkedListSingleRemoveDuplicates1HashSetCompleteTests.cs" />
+    <Compile Include="LinkedList\SingleLink\RemoveDuplicates\LinkedListSingleRemoveDuplicates2NoAdditionalDSComplete.cs" />
+    <Compile Include="LinkedList\SingleLink\RemoveDuplicates\LinkedListSingleRemoveDuplicates2NoAdditionalDSCompleteTests.cs" />
+    <Compile Include="LinkedList\SingleLink\Reverse\LinkedListSingleLinkReverse1Complete.cs" />
+    <Compile Include="LinkedList\SingleLink\Reverse\LinkedListSingleLinkReverse1CompleteTests.cs" />
+    <Compile Include="LinkedList\SingleLink\Split\LinkedListSingleLinkSplit1BruteForceComplete.cs" />
+    <Compile Include="LinkedList\SingleLink\Split\LinkedListSingleLinkSplit1BruteForceCompleteTests.cs" />
+    <Compile Include="LinkedList\SingleLink\Split\LinkedListSingleLinkSplit2FastSlowComplete.cs" />
+    <Compile Include="LinkedList\SingleLink\Split\LinkedListSingleLinkSplit2FastSlowCompleteTests.cs" />
+    <Compile Include="Matrix\Helpers\MatrixHelpers.cs" />
+    <Compile Include="Matrix\Rotate\MatrixRotate1Complete.cs" />
+    <Compile Include="Matrix\Rotate\MatrixRotate1CompleteTests.cs" />
+    <Compile Include="Matrix\TicTacWin\TicTacWin1BruteForceComplete.cs" />
+    <Compile Include="Matrix\TicTacWin\TicTacWin1BruteForceCompleteTests.cs" />
+    <Compile Include="MultipleStacksUsingSingleArray\MultipleStacksUsingSingleArray1FixedSizeComplete.cs" />
+    <Compile Include="MultipleStacksUsingSingleArray\MultipleStacksUsingSingleArray1FixedSizeCompleteTests.cs" />
+    <Compile Include="MultipleStacksUsingSingleArray\MultipleStacksUsingSingleArray2VariableSizeComplete.cs" />
+    <Compile Include="MultipleStacksUsingSingleArray\MultipleStacksUsingSingleArray2VariableSizeCompleteTests.cs" />
+    <Compile Include="Matrix\PaintFill\PaintFill1RecursiveComplete.cs" />
+    <Compile Include="Matrix\PaintFill\PaintFill1RecursiveCompleteTests.cs" />
+    <Compile Include="NumberSwapper\NumberSwapper2InlineComplete.cs" />
+    <Compile Include="NumberSwapper\NumberSwapper2InlineCompleteTests.cs" />
+    <Compile Include="Stack\IsPalindrome\IsPalindromeUsingStacks1StandardComplete.cs" />
+    <Compile Include="Stack\IsPalindrome\IsPalindromeUsingStacks1StandardCompleteTests.cs" />
+    <Compile Include="String_\Palindrome\FindLongestPalindrome\FindLongestPalindrome1BruteForceComplete.cs" />
+    <Compile Include="String_\Palindrome\FindLongestPalindrome\FindLongestPalindrome1BruteForceCompleteTests.cs" />
+    <Compile Include="String_\Palindrome\FindLongestPalindrome\FindLongestPalindrome2UseAnchorsComplete.cs" />
+    <Compile Include="String_\Palindrome\FindLongestPalindrome\FindLongestPalindrome2UseAnchorsCompleteTests.cs" />
+    <Compile Include="String_\Palindrome\FindPalindromePermutations\FindPalindromePermutations1StandardComplete.cs" />
+    <Compile Include="String_\Palindrome\FindPalindromePermutations\FindPalindromePermutations1StandardCompleteTests.cs" />
+    <Compile Include="String_\Palindrome\IsPalindromePermutation\PalindromeIsPalindromePermutation1SimpleComplete.cs" />
+    <Compile Include="String_\Palindrome\IsPalindromePermutation\PalindromeIsPalindromePermutation1SimpleTestsComplete.cs" />
+    <Compile Include="String_\Palindrome\IsPalindromePermutation\PalindromeIsPalindromePermutation2RunningCountComplete.cs" />
+    <Compile Include="String_\Palindrome\IsPalindromePermutation\PalindromeIsPalindromePermutation2RunningCountTestsComplete.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queue\Stacks\QueueViaStacks1SimpleComplete.cs" />
+    <Compile Include="Queue\Stacks\QueueViaStacks1SimpleCompleteTests.cs" />
+    <Compile Include="Queue\Stacks\QueueViaStacks2OptimizedComplete.cs" />
+    <Compile Include="Queue\Stacks\QueueViaStacks2OptimizedCompleteTests.cs" />
+    <Compile Include="Stack\UsingArray\FixedSize\StackUsingArray1FixedSizeComplete.cs" />
+    <Compile Include="Stack\UsingArray\FixedSize\StackUsingArray1FixedSizeCompleteTests.cs" />
+    <Compile Include="Stack\UsingArray\UnlimitedSize\StackUsingArray2UnlimitedSizeComplete.cs" />
+    <Compile Include="Stack\UsingArray\UnlimitedSize\StackUsingArray2UnlimitedSizeCompleteTests.cs" />
+    <Compile Include="String_\Fibonacci\Fibonacci1RecursiveCompleteTests.cs" />
+    <Compile Include="String_\Fibonacci\Fibonacci1RecursiveComplete.cs" />
+    <Compile Include="String_\Fibonacci\Fibonacci2RecursiveMemoizationComplete.cs" />
+    <Compile Include="String_\Fibonacci\Fibonacci2RecursiveMemoizationCompleteTests.cs" />
+    <Compile Include="String_\Fibonacci\Fibonacci3IterativeComplete.cs" />
+    <Compile Include="String_\Fibonacci\Fibonacci3IterativeCompleteTests.cs" />
+    <Compile Include="String_\FindFirstNonRepeatedCharIndex\FindFirstNonRepeatedCharIndex2UseHashSetComplete.cs" />
+    <Compile Include="String_\FindFirstNonRepeatedCharIndex\FindFirstNonRepeatedCharIndex1BruteForceComplete.cs" />
+    <Compile Include="String_\FindFirstNonRepeatedCharIndex\FindFirstNonRepeatedCharIndex1BruteForceCompleteTests.cs" />
+    <Compile Include="String_\FindFirstNonRepeatedCharIndex\FindFirstNonRepeatedCharIndex2UseHashSetCompleteTests.cs" />
+    <Compile Include="String_\Palindrome\IsPalindrome\IsPalindrome1StandardComplete.cs" />
+    <Compile Include="String_\Palindrome\IsPalindrome\IsPalindrome1StandardCompleteTests.cs" />
+    <Compile Include="String_\Palindrome\GetMakePalindromeStepCount\GetMakePalindromeStepCount1StandardComplete.cs" />
+    <Compile Include="String_\Palindrome\GetMakePalindromeStepCount\GetMakePalindromeStepCount1StandardCompleteTests.cs" />
+    <Compile Include="String_\Permutations\GetPermutations1NoDuplicatesByCharComplete.cs" />
+    <Compile Include="String_\Permutations\GetPermutations1NoDuplicatesByCharCompleteTests.cs" />
+    <Compile Include="String_\Permutations\GetPermutations2UseDictionaryComplete.cs" />
+    <Compile Include="String_\Permutations\GetPermutations2UseDictionaryCompleteTests.cs" />
+    <Compile Include="TripleStep\TripleStep2ComputeAndCountIterativeComplete.cs" />
+    <Compile Include="TripleStep\TripleStep2ComputeAndCountIterativeCompleteTests.cs" />
+    <Compile Include="TripleStep\TripleStep1ComputeAndCountRecursiveComplete.cs" />
+    <Compile Include="TripleStep\TripleStep1ComputeAndCountRecursiveCompleteTests.cs" />
+    <Compile Include="TripleStep\TripleStep3CountRecursiveComplete.cs" />
+    <Compile Include="TripleStep\TripleStep3CountRecursiveCompleteTests.cs" />
+    <Compile Include="TripleStep\TripleStep4CountMemoizationRecursiveComplete.cs" />
+    <Compile Include="TripleStep\TripleStep4CountMemoizationRecursiveCompleteTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Link>README.md</Link>
+    </None>
+    <None Include="Array_\CompressSimple\CompressSimple.md" />
+    <None Include="Array_\CompressSimple\CompressSimple1Standard.md" />
+    <None Include="Array_\FindMatchingPairs\FindMatchingPairs.md" />
+    <None Include="Array_\FindMatchingPairs\FindMatchingPairs1CharCountMaps.md" />
+    <None Include="Array_\FindMatchingPairs\FindMatchingPairs2SortAndParse.md" />
+    <None Include="Array_\FizzBuzz\FizzBuzz.md" />
+    <None Include="Array_\FizzBuzz\FizzBuzz1Standard.md" />
+    <None Include="Array_\MagicIndex\MagicIndex.md" />
+    <None Include="Array_\MagicIndex\MagicIndex1BruteForce.md" />
+    <None Include="Array_\MagicIndex\MagicIndex2BinarySearch.md" />
+    <None Include="Array_\MagicIndex\MagicIndex3BinarySearchAllowDuplicates.md" />
+    <None Include="Array_\MergeSortedInline\ArrayMergeSortedInline.md" />
+    <None Include="Array_\MergeSortedInline\ArrayMergeSortedInline1.md" />
+    <None Include="Array_\MergeSorted\ArrayMergeSorted.md" />
+    <None Include="Array_\MergeSorted\ArrayMergeSorted1Simple.md" />
+    <None Include="Array_\MergeSorted\ArrayMergeSorted2SingleLoop.md" />
+    <None Include="Array_\MissingInt\ArrayFindMissingInt.md" />
+    <None Include="Array_\MissingInt\ArrayFindMissingInt1.md" />
+    <None Include="Array_\PowerSet\PowerSet.md" />
+    <None Include="Array_\PowerSet\PowerSet1Recursive.md" />
+    <None Include="Array_\PowerSet\PowerSet2Combinatorics.md" />
+    <None Include="Array_\SearchSortedNoSize\ArraySearchSortedNoSize.md" />
+    <None Include="Array_\SearchSortedNoSize\ArraySearchSortedNoSize1BruteForce.md" />
+    <None Include="Array_\SearchSortedNoSize\ArraySearchSortedNoSize2BinarySearch.md" />
+    <None Include="Array_\SearchSortedNoSize\ArraySearchSortedNoSize3BinarySearchNoSize.md" />
+    <None Include="Array_\Sort\ArraySort.md" />
+    <None Include="Array_\Sort\ArraySort1BubbleSort.md" />
+    <None Include="Array_\Sort\ArraySort2SelectionSort.md" />
+    <None Include="Array_\Sort\ArraySort3InsertionSort.md" />
+    <None Include="Array_\Sort\ArraySort4MergeSortSimple.md" />
+    <None Include="Array_\StackOfBoxes\StackOfBoxes.md" />
+    <None Include="Array_\StackOfBoxes\StackOfBoxes1ComputeAndCount.md" />
+    <None Include="NumberSwapper\NumberSwapper.md" />
+    <None Include="NumberSwapper\NumberSwapper1UseTempVar.md" />
+    <None Include="BinaryTree\CheckBalanced\BinaryTreeCheckBalanced.md" />
+    <None Include="BinaryTree\CheckBalanced\BinaryTreeCheckBalanced1RecursiveComplete.md" />
+    <None Include="BinaryTree\CheckBalanced\BinaryTreeCheckBalanced2RecursiveOptimizedComplete.md" />
+    <None Include="BinaryTree\GetHeight\BinaryTreeGetHeight.md" />
+    <None Include="BinaryTree\GetHeight\BinaryTreeGetHeight1Recursive.md" />
+    <None Include="BinaryTree\GetHeight\BinaryTreeGetHeight2Iterative.md" />
+    <None Include="BinaryTree\IsBinarySearchTree\BinaryTreeIsBinarySearchTree.md" />
+    <None Include="BinaryTree\IsBinarySearchTree\BinaryTreeIsBinarySearchTree1Recursive.md" />
+    <None Include="BinaryTree\IsComplete\BinaryTreeIsComplete.md" />
+    <None Include="BinaryTree\IsComplete\BinaryTreeIsComplete1.md" />
+    <None Include="BinaryTree\IsFull\BinaryTreeIsFull.md" />
+    <None Include="BinaryTree\IsFull\BinaryTreeIsFull1.md" />
+    <None Include="BinaryTree\IsPerfect\BinaryTreeIsPerfect.md" />
+    <None Include="BinaryTree\IsPerfect\BinaryTreeIsPerfect1.md" />
+    <None Include="BinaryTree\Traverse\InOrder\BinaryTreeTraverseInOrder.md" />
+    <None Include="BinaryTree\Traverse\InOrder\BinaryTreeTraverseInOrder1Recursive.md" />
+    <None Include="BinaryTree\Traverse\InOrder\BinaryTreeTraverseInOrder2Iterative.md" />
+    <None Include="BinaryTree\Traverse\PostOrder\BinaryTreeTraversePostOrder.md" />
+    <None Include="BinaryTree\Traverse\PostOrder\BinaryTreeTraversePostOrder1Recursive.md" />
+    <None Include="BinaryTree\Traverse\PostOrder\BinaryTreeTraversePostOrder2Iterative.md" />
+    <None Include="BinaryTree\Traverse\PreOrder\BinaryTreeTraversePreOrder.md" />
+    <None Include="BinaryTree\Traverse\PreOrder\BinaryTreeTraversePreOrder2Iterative.md" />
+    <None Include="BinaryTree\Traverse\PreOrder\BinaryTreeTraversePreOrder1Recursive.md" />
+    <None Include="BitManipulation\CreatePatternMask\BitManipulationCreatePatternMask.md" />
+    <None Include="BitManipulation\CreatePatternMask\BitManipulationCreatePatternMask1.md" />
+    <None Include="BitManipulation\GetBitCount\BitManipulationGetBitCount.md" />
+    <None Include="BitManipulation\GetBitCount\BitManipulationGetBitCount1ConvertToString.md" />
+    <None Include="BitManipulation\GetBitCount\BitManipulationGetBitCount2MaskShift.md" />
+    <None Include="BitManipulation\GetBitCount\BitManipulationGetBitCount3BitShift.md" />
+    <None Include="BitManipulation\CreateSimpleMask\BitManipulationCreateSimpleMask.md" />
+    <None Include="BitManipulation\CreateSimpleMask\BitManipulationCreateSimpleMask1.md" />
+    <None Include="BitManipulation\GetMostSignificantBit\BitManipulationGetMostSignificantBit.md" />
+    <None Include="BitManipulation\GetMostSignificantBit\BitManipulationGetMostSignificantBit1ConvertToString.md" />
+    <None Include="BitManipulation\GetMostSignificantBit\BitManipulationGetMostSignificantBit2BitShift.md" />
+    <None Include="BitManipulation\GetMostSignificantBit\BitManipulationGetMostSignificantBit3MaskShift.md" />
+    <None Include="BitManipulation\GetMostSignificantBit\BitManipulationGetMostSignificantBit4BinarySearch.md" />
+    <None Include="BitManipulation\GetSetClearBit\BitManipulationGetSetClearBit.md" />
+    <None Include="BitManipulation\GetSetClearBit\BitManipulationGetSetClearBit1.md" />
+    <None Include="BitManipulation\Insertion\BitManipulationInsertion.md" />
+    <None Include="BitManipulation\Insertion\BitManipulationInsertion1.md" />
+    <None Include="BitManipulation\NextNumber\BitManipulationNextNumber.md" />
+    <None Include="BitManipulation\NextNumber\BitManipulationNextNumber1BruteForce.md" />
+    <None Include="BitManipulation\NextNumber\BitManipulationNextNumber2BitAdjust.md" />
+    <None Include="BitManipulation\NextNumber\BitManipulationNextNumber3Arithmetic.md" />
+    <None Include="BitManipulation\PairwiseSwap\BitManipulationPairwiseSwap.md" />
+    <None Include="BitManipulation\PairwiseSwap\BitManipulationPairwiseSwap1BruteForce.md" />
+    <None Include="BitManipulation\PairwiseSwap\BitManipulationPairwiseSwap2ClearAndShift.md" />
+    <None Include="CodingProblems.ruleset" />
+    <None Include="Graph\RouteBetweenNodes\GraphIsRouteBetweenNodes.md" />
+    <None Include="Graph\RouteBetweenNodes\GraphIsRouteBetweenNodes1DFS.md" />
+    <None Include="IsUnique\String\IsUniqueString.md" />
+    <None Include="IsUnique\String\IsUniqueString1HashSet.md" />
+    <None Include="IsUnique\String\IsUniqueString2NoAdditionalDS.md" />
+    <None Include="IsUnique\String\IsUniqueString3SortFirst.md" />
+    <None Include="IsUnique\String\IsUniqueString4BoolArray.md" />
+    <None Include="IsUnique\String\IsUniqueString5BitArray.md" />
+    <None Include="LinkedList\SingleLink\FindIntersection\LinkedListSingleLinkFindIntersection.md" />
+    <None Include="LinkedList\SingleLink\FindIntersection\LinkedListSingleLinkFindIntersection1BruteForce.md" />
+    <None Include="LinkedList\SingleLink\FindIntersection\LinkedListSingleLinkFindIntersection2Optimized.md" />
+    <None Include="LinkedList\SingleLink\Partition\LinkedListSingleLinkPartition.md" />
+    <None Include="LinkedList\SingleLink\Partition\LinkedListSingleLinkPartition1Stable.md" />
+    <None Include="LinkedList\SingleLink\Partition\LinkedListSingleLinkPartition2StableUseDummyNodes.md" />
+    <None Include="LinkedList\SingleLink\Partition\LinkedListSingleLinkPartition3NonStable.md" />
+    <None Include="LinkedList\SingleLink\RemoveDuplicates\LinkedListSingleRemoveDuplicates.md" />
+    <None Include="LinkedList\SingleLink\RemoveDuplicates\LinkedListSingleRemoveDuplicates1HashSet.md" />
+    <None Include="LinkedList\SingleLink\RemoveDuplicates\LinkedListSingleRemoveDuplicates2NoAdditionalDS.md" />
+    <None Include="LinkedList\SingleLink\Reverse\LinkedListSingleLinkReverse.md" />
+    <None Include="LinkedList\SingleLink\Reverse\LinkedListSingleLinkReverse1.md" />
+    <None Include="LinkedList\SingleLink\Split\LinkedListSingleLinkSplit.md" />
+    <None Include="LinkedList\SingleLink\Split\LinkedListSingleLinkSplit1BruteForce.md" />
+    <None Include="LinkedList\SingleLink\Split\LinkedListSingleLinkSplit2FastSlow.md" />
+    <None Include="Matrix\Rotate\MatrixRotate.md" />
+    <None Include="Matrix\Rotate\MatrixRotate1.md" />
+    <None Include="Matrix\TicTacWin\TicTacWin.md" />
+    <None Include="Matrix\TicTacWin\TicTacWin1.md" />
+    <None Include="MultipleStacksUsingSingleArray\MultipleStacksUsingSingleArray.md" />
+    <None Include="MultipleStacksUsingSingleArray\MultipleStacksUsingSingleArray1FixedSize.md" />
+    <None Include="MultipleStacksUsingSingleArray\MultipleStacksUsingSingleArray2VariableSize.md" />
+    <None Include="NumberSwapper\NumberSwapper2Inline.md" />
+    <None Include="packages.config" />
+    <AdditionalFiles Include="stylecop.json" />
+    <None Include="Matrix\PaintFill\PaintFill.md" />
+    <None Include="Matrix\PaintFill\PaintFill1Recursive.md" />
+    <None Include="Stack\IsPalindrome\IsPalindromeUsingStacks.md" />
+    <None Include="Stack\IsPalindrome\IsPalindromeUsingStacks1Standard.md" />
+    <None Include="String_\Palindrome\FindLongestPalindrome\FindLongestPalindrome1BruteForce.md" />
+    <None Include="String_\Palindrome\FindLongestPalindrome\FindLongestPalindrome.md" />
+    <None Include="String_\Palindrome\FindLongestPalindrome\FindLongestPalindrome2UseAnchors.md" />
+    <None Include="String_\Palindrome\FindPalindromePermutations\FindPalindromePermutations.md" />
+    <None Include="String_\Palindrome\FindPalindromePermutations\FindPalindromePermutations1Standard.md" />
+    <None Include="String_\Palindrome\GetMakePalindromeStepCount\GetMakePalindromeStepCount.md" />
+    <None Include="String_\Palindrome\GetMakePalindromeStepCount\GetMakePalindromeStepCount1Standard.md" />
+    <None Include="String_\Palindrome\IsPalindromePermutation\PalindromeIsPalindromePermutation.md" />
+    <None Include="String_\Palindrome\IsPalindromePermutation\PalindromeIsPalindromePermutation1Simple.md" />
+    <None Include="String_\Palindrome\IsPalindromePermutation\PalindromeIsPalindromePermutation2RunningCount.md" />
+    <None Include="Queue\Stacks\QueueViaStacks.md" />
+    <None Include="Queue\Stacks\QueueViaStacks1SimpleComplete.md" />
+    <None Include="Queue\Stacks\QueueViaStacks2OptimizedComplete.md" />
+    <None Include="Stack\UsingArray\FixedSize\StackUsingArray1FixedSize.md" />
+    <None Include="Stack\UsingArray\UnlimitedSize\StackUsingArray2UnlimitedSize.md" />
+    <None Include="String_\Fibonacci\Fibonacci.md" />
+    <None Include="String_\Fibonacci\Fibonacci1Recursive.md" />
+    <None Include="String_\Fibonacci\Fibonacci2RecursiveMemoization.md" />
+    <None Include="String_\Fibonacci\Fibonacci3Iterative.md" />
+    <None Include="String_\FindFirstNonRepeatedCharIndex\FindFirstNonRepeatedCharIndex.md" />
+    <None Include="String_\FindFirstNonRepeatedCharIndex\FindFirstNonRepeatedCharIndex1BruteForce.md" />
+    <None Include="String_\FindFirstNonRepeatedCharIndex\FindFirstNonRepeatedCharIndex2UseHashSet.md" />
+    <None Include="String_\Palindrome\IsPalindrome\IsPalindrome.md" />
+    <None Include="String_\Palindrome\IsPalindrome\IsPalindrome1Standard.md" />
+    <None Include="String_\Permutations\GetPermutations.md" />
+    <None Include="String_\Permutations\GetPermutations1NoDuplicatesByChar.md" />
+    <None Include="String_\Permutations\GetPermutations2UseDictionary.md" />
+    <None Include="TripleStep\TripleStep.md" />
+    <None Include="TripleStep\TripleStep2ComputeAndCountIterative.md" />
+    <None Include="TripleStep\TripleStep1ComputeAndCountRecursive.md" />
+    <None Include="TripleStep\TripleStep3CountRecursive.md" />
+    <None Include="TripleStep\TripleStep4CountMemoizationRecursive.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets'))" />
+  </Target>
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" />
+</Project>

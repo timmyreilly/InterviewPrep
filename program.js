@@ -195,7 +195,7 @@ for (var i = 0; i < arrA.length; i++) {
     }
 }
 
-document.writeln(JSON.stringify(commonElements));
+document.writeln('Common elements: ', JSON.stringify(commonElements));
 
 document.writeln('**************');
 

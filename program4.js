@@ -4,6 +4,21 @@
 // Need to instatiate the playfield. 
 // This is helpful: http://www.crockford.com/javascript/private.html 
 
+
+function playField(param) {
+    this.locationRobot1 = param.startingLocation1; 
+    this.locationRobot2 = param.startingLocation2;
+
+    this.locationParachute1 = param.startingLocation1;
+    this.locationParachute2 = param.startingLocation2; 
+    
+    this.checkForBuddy = function() {
+        if (this.locationRobot1 === this.locationRobot2) {
+            return true; 
+        }
+    }
+}
+
 function robot(param) {
     this.location = param.location;
     var secret = 'secretssss';

@@ -2,7 +2,41 @@
 // Still learning: https://css-tricks.com/how-do-you-structure-javascript-the-module-pattern-edition/ 
 
 // Need to instatiate the playfield. 
+// This is helpful: http://www.crockford.com/javascript/private.html 
 
+function robot(param) {
+    this.location = param.location;
+    var secret = 'secretssss';
+    var that = this; 
+
+    this.moveRight = function() {
+        this.location = this.location + 1; 
+    }
+
+}
+
+var myRobot1 = new robot({location: 0}); 
+var myRobot2 = new robot({location: 3}); 
+
+robot.prototype.moveLeft = function() {
+    return this.location = this.location -1; 
+}
+
+document.writeln('1 loc: ', myRobot1.location, ' 2 loc: ', myRobot2.location); 
+myRobot1.moveLeft(); 
+myRobot2.moveLeft(); 
+document.writeln('1 loc: ', myRobot1.location, ' 2 loc: ', myRobot2.location); 
+
+myRobot1.moveRight();
+myRobot1.moveRight();
+myRobot2.moveRight();
+myRobot2.moveRight();
+myRobot2.moveRight();
+
+document.writeln('1 loc: ', myRobot1.location, ' 2 loc: ', myRobot2.location); 
+
+
+/*
 var playField = []; 
 
 playField[50] = 'parachute 1'; 
@@ -17,7 +51,7 @@ var r, robotAgain = {
     }, 
 
     init: function() {
-        s = this.locations; 
+        r = this.locations; 
     }, 
 
     placeRobot: function(playField){
@@ -69,3 +103,6 @@ document.writeln('robot1: ', robot1.location, ' robot2: ', robot2.location);
 while(robot1.buddyFound == false) {
     
 }
+*/ 
+
+

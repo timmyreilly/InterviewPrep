@@ -1,4 +1,5 @@
 // Object literal...
+// Still learning: https://css-tricks.com/how-do-you-structure-javascript-the-module-pattern-edition/ 
 
 // Need to instatiate the playfield. 
 
@@ -9,7 +10,24 @@ playField[25] = 'parachute 2';
 
 document.writeln(playField); 
 
+var r, robotAgain = {
+    locations: {
+        parachute: 0, 
+        playFieldLocation: 0
+    }, 
+
+    init: function() {
+        s = this.locations; 
+    }, 
+
+    placeRobot: function(playField){
+
+    }
+}
+
 var robot = function(spec) {
+
+    var that = {}; 
     var location = 0; 
     var parachuteFound = false; 
     var buddyFound = false; 

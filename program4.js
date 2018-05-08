@@ -9,6 +9,12 @@ function robot(param) {
     var secret = 'secretssss';
     var that = this; 
 
+    function checkLocation() {
+        if (secret) {
+            document.writeln(secret); 
+        }
+    }
+
     this.moveRight = function() {
         this.location = this.location + 1; 
     }
@@ -33,7 +39,43 @@ myRobot2.moveRight();
 myRobot2.moveRight();
 myRobot2.moveRight();
 
-document.writeln('1 loc: ', myRobot1.location, ' 2 loc: ', myRobot2.location); 
+document.writeln('1 loc: ', myRobot1.location, ' 2 loc: ', myRobot2.location);
+
+// private and privileged members can only be made when an object is constructed. Public members can be added at any time. 
+
+// Patterns: 
+
+// Public: 
+
+function constructureator() {
+    this.membername = value; 
+}
+
+constructureator.prototype.membernameTwo = 'cheese'; 
+
+
+// Private: 
+
+function constructureatorTwo() {
+    var that = this; 
+    var membername = value; 
+
+    function memberName() {
+        return true; // This is a private closure. 
+    } // this is the same as: 
+
+    var memberNameSame = function memberNameSame() {}; 
+}
+
+// Privileged
+
+function constructureatorThree() {
+    this.memberName = function() {}; 
+    // This guy has access to everything in our object. 
+}
+
+
+
 
 
 /*

@@ -53,4 +53,7 @@ function ZParenizor2(vaue) {
     return that; 
 }
 
-// Was a but now's a - relationship 
+// Was a but now's a - relationship - still has access to the priveledged methods. 
+// Whaaa 
+// We can call the method method at any time, and all present and future instances of the class will have that method. 
+// Inheritance works retroactively. All present and future instances of the class wil lhave that method. 

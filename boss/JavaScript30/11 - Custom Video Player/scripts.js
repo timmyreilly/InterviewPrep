@@ -7,6 +7,8 @@ const toggle = document.querySelector('.toggle');
 const skipButtons = player.querySelectorAll('[data-skip]');
 const ranges = player.querySelectorAll('.player__slider'); 
 
+const fullScreen = player.querySelector('.full'); 
+
 // methods 
 
 function togglePlay() {
@@ -46,6 +48,9 @@ function scrub(e) {
     video.currentTime = scrubTime; 
 }
 
+function makeFullScreen() {
+    video.webkitRequestFullScreen(); 
+}
 
 // add event listeners
 
@@ -55,6 +60,8 @@ video.addEventListener('pause', updateButton);
 video.addEventListener('timeupdate', handleProgress); 
 
 toggle.addEventListener('click', togglePlay); 
+
+fullScreen.addEventListener('click', makeFullScreen); 
 
 skipButtons.forEach( button => button.addEventListener('click', skip))
 

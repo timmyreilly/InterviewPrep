@@ -80,6 +80,17 @@
       localStorage.setItem('items', JSON.stringify(items));
     }
 
+    function unCheckAll() {
+      console.log(items); 
+      items.forEach((item) => {
+        item.done = false; 
+      })
+
+      populateList(items, itemsList); 
+      localStorage.setItem('items', JSON.stringify(items));
+
+    }
+
     addItems.addEventListener('submit', addItem);
     itemsList.addEventListener('click', toggleDone);
 

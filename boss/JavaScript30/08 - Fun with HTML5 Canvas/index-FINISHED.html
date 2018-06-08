@@ -32,6 +32,7 @@ function draw(e) {
   ctx.moveTo(lastX, lastY);
   // go to
   ctx.lineTo(e.offsetX, e.offsetY);
+  ctx.strokeStyle();
   ctx.stroke();
   [lastX, lastY] = [e.offsetX, e.offsetY];
 

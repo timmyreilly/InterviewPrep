@@ -39,6 +39,8 @@ function greenScreen(pixels) {
     document.querySelectorAll('.rgb input').forEach((input) => {
       levels[input.name] = input.value;
     });
+
+    console.log(levels); 
   
     for (i = 0; i < pixels.data.length; i = i + 4) {
       red = pixels.data[i + 0];
@@ -53,8 +55,9 @@ function greenScreen(pixels) {
         && green <= levels.gmax
         && blue <= levels.bmax) {
         // take it out!
-        pixels.data[i + 3] = 0;
+        pixels.data[i + 3] = 255;
         //pixels.data[i + 0] = 255; 
+        pixels.data[i + 50] = pixels.data[i + 0]
       }
     }
   

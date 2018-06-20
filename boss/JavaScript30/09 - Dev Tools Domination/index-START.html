@@ -17,29 +17,92 @@
       p.style.fontSize = '50px';
     }
 
+    // What's this one... How to log an event or use a break point. 
+    // Find it on the dom... And add 
     // Regular
+    console.log(dogs);
+    console.table(dogs); 
 
     // Interpolated
+    console.log("%s why would you use this...", '...'); 
 
     // Styled
+    console.log("%c Hmmmm stylish", 'background: red; font-size: 1'); 
 
     // warning!
+    console.warn("WATCH OUT"); 
 
     // Error :|
+    console.error("SHIT")
+    console.error("nonsense:");
 
     // Info
+    console.info("hey heads up, crocodiles eat people"); 
 
     // Testing
+    console.assert(1 === 0, 'nah thats not right'); 
+    console.assert(1 === 1, "you won't see this"); 
+
+    const p = document.querySelector('p'); 
+    console.assert(p.classList.contains('ouch'), 'This is wrong...'); 
 
     // clearing
+    console.clear(); // ahh that makes sense
 
     // Viewing DOM Elements
+    console.log(document.querySelector('p'));
+    console.dir(document.querySelector('p'));   // this is a good one. 
 
     // Grouping together
 
+    dogs.forEach((dog) => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`This ${dog.name}`); 
+      console.log(`This ${dog.age}`); 
+      console.groupEnd(`${dog.name}`); 
+    })
+
+    
+
     // counting
+    console.count('albert'); 
+    console.count('albert'); 
+    console.count('frank');
+    // console.count('frank');
+    // console.count('frank');
+    // console.count('albert'); 
+    // console.count('albert'); 
+    // console.count('frank');
 
     // timing
+    console.time('now')
+
+    fetch('https://api.github.com/users/timmyreilly', )
+    .then((data) => {
+      return data.json(); 
+    })
+    .then((data) => {
+      console.log(data); 
+      console.time('now')
+
+    })
+
+    const x = `<p class="tres-important" id="id-this-you-jerk"> lolz</p>`
+
+    document.writeln(x); 
+    console.dir(x); 
+    
+    const theSonOfX = document.querySelector('.tres-important'); 
+    console.dir(theSonOfX); 
+
+
+
+    const theOtherSonOfX = document.querySelector("#id-this-you-jerk"); 
+    console.dir(theOtherSonOfX); 
+
+    // why are we getting two... 
+
+    // why is there a class and an id? 
 
   </script>
 </body>

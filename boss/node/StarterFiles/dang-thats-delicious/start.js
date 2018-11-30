@@ -11,7 +11,11 @@ if (major < 7 || (major === 7 && minor <= 5)) {
 require('dotenv').config({ path: 'variables.env' });
 
 // Connect to our Database and handle any bad connections
-mongoose.connect(process.env.DATABASE);
+// mongoose.connect("mongodb://dang-thats-delicious-db:IYuvUlDXzTUZLSxFrNcTI14SvyoWJEBetHAmQS2Ye9JQDohIPCGsJmoDhwqbGJ9ePAwMblA65qYBE0nyzF4Aow%3D%3D@dang-thats-delicious-db.documents.azure.com:10255/?ssl=true"); 
+
+const options = {user: process.env.USER, pass: process.env.PASSWORD };
+mongoose.connect(process.env.HOST, options); 
+
 mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
 mongoose.connection.on('error', (err) => {
   console.error(`🙅 🚫 🙅 🚫 🙅 🚫 🙅 🚫 → ${err.message}`);

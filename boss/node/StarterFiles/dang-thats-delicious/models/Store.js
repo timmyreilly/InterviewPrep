@@ -1,29 +1,48 @@
-const mongoose = require('mongoose'); 
+const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-const slug = require('slugs'); 
+const slug = require('slugs');
 
 const storeSchema = new mongoose.Schema({
-    name : {
-        type: String, 
+    name: {
+        type: String,
         trim: true, // "   store name   " will become "store name" 
         required: 'Please enter a store name'
-    }, 
-    slug: String, 
+    },
+    slug: String,
     description: {
-        type: String, 
+        type: String,
         trim: true
     },
-    tags: [String]
+    tags: [String],
+    created: {
+        type: Date,
+        default: Date.now
+    },
+    location: {
+        type: {
+            type: String,
+            default: 'Point'
+        },
+        coordinates: [{
+            type: Number,
+            required: 'You must supply coordinates!'
+        }],
+        address: {
+            type: String,
+            required: 'You must supply an addresss.'
+        }
 
-}); 
+    }
 
-storeSchema.pre('save', function(next) {
-    if(!this.isModified('name')) {
+});
+
+storeSchema.pre('save', function (next) {
+    if (!this.isModified('name')) {
         next(); // skip it
         return; // stop this function from running 
     }
-    this.slug = slug(this.name); 
-    next(); 
+    this.slug = slug(this.name);
+    next();
     // ToDo make more resilient so slugs are unique 
 })
 

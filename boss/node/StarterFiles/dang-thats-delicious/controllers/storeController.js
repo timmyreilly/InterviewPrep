@@ -49,7 +49,7 @@ exports.upload = multer(multerOptions).single('photo');
 exports.createStore = async (req, res) => {
     const store = await (new Store(req.body)).save();
     req.flash('success', `Succesfully created ${store.name}. Care to leave a review`);
-    res.redirect(`/store/${store.slug}`);
+    res.redirect(`/stores/${store.slug}`);
 }
 
 exports.getStores = async (req, res) => {

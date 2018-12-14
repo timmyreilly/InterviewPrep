@@ -49,7 +49,7 @@ exports.upload = multer(multerOptions).single('photo');
 exports.createStore = async (req, res) => {
     const store = await (new Store(req.body)).save();
     req.flash('success', `Succesfully created ${store.name}. Care to leave a review`);
-    res.redirect(`/stores/${store.slug}`);
+    res.redirect(`/store/${store.slug}`);
 }
 
 exports.getStores = async (req, res) => {
@@ -91,3 +91,8 @@ exports.getStore = async (req, res, next) => {
     // res.send(store); 
     res.render("store", {store, title: store.name})
 }
+
+exports.getStoresByTag = async (req, res) => {
+    const stores = await Store.getTagsList(); 
+    res.json(stores);  
+};

@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const storeController = require('../controllers/storeController');
+const userController = require('../controllers/userController')
 
 const { catchErrors } = require('../handlers/errorHandlers');
 
@@ -26,6 +27,12 @@ router.get('/stores/:slug', catchErrors(storeController.getStore));
 
 router.get('/tags', catchErrors(storeController.getStoresByTag));
 router.get('/tags/:tag', catchErrors(storeController.getStoresByTag)); 
+
+// 1. validate the user
+// 2. 
+// 3. 
+
+
 
 
 module.exports = router;
